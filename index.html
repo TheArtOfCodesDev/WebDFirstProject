@@ -1,7 +1,7 @@
 <html>
-
 <head>
 	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia|Jomhuria&effect=fire|neon|outline|emboss|shadow-multiple">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="./css/popup.css">
 	<title> The Art Of Code - HomePage</title>
@@ -25,30 +25,46 @@
 		</div>
 		<div class="login_popup" style="display: none;">
 			<div class="signup">
-				<p id="popup_line1">Don't have an account...???</p>
-				<p id="popup_line2">Sign up for services</p>
+				<!-- <p id="popup_line1" class="font-effect-emboss">Don't have an account...???</p>
+				<p id="popup_line2" class="font-effect-shadow-multiple">Sign up for services</p> -->
+				<div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
 				<form class="signup-form">
-					<label for="fname" id="slabel">First name</label>
-					<label for="lname" id="slabel">Last Name</label><br>
+					<label for="fname" class="slabel" id="fnlabel">First name</label>
+					<label for="lname" class="slabel" id="lnlabel">Last Name</label><br>
 					<input type="text" id="fname" class="signupbox">
 					<input type="text" id="lname" class="signupbox"><br>
-					<label for="uname" id="slabel">Username</label>
-					<label for="mail" id="slabel">Mail ID</label><br>
+					<label for="uname" class="slabel" id="unlabel">Username</label>
+					<label for="mail" class="slabel" id="maillabel">Mail ID</label><br>
 					<input type="text" id="uname" class="signupbox">
 					<input type="email" id="mail" class="signupbox"><br>
-					<label for="pass" id="slabel">Password</label>
-					<label for="cpass" id="slabel">Confirm Password</label><br>
+					<label for="pass" class="slabel" id="passlabel">Password</label>
+					<label for="cpass" class="slabel" id="cpasslabel">Confirm Password</label><br>
 					<input type="password" id="pass" class="signupbox">
 					<input type="password" id="cpass" class="signupbox">
 				</form>
 			</div>
 			<div class="login">
 				<button class="close">Close</button>
-				<p id="popup_line3">Login with your account</p>
+				<!-- <p id="popup_line3" class="font-effect-shadow-multiple">Login with your account</p> -->
+				<!-- partial:index.partial.html -->
+				<svg viewBox="0 0 960 300">
+					<symbol id="s-text">
+						<text text-anchor="middle" x="50%" y="80%">Login with your account</text>
+					</symbol>
+				
+					<g class = "g-ants">
+						<use xlink:href="#s-text" class="text-copy"></use>
+						<use xlink:href="#s-text" class="text-copy"></use>
+						<use xlink:href="#s-text" class="text-copy"></use>
+						<use xlink:href="#s-text" class="text-copy"></use>
+						<use xlink:href="#s-text" class="text-copy"></use>
+					</g>
+				</svg>
+				<!-- partial -->
 				<form class="login-form">
-					<label for="luname" id="llabel">Username</label><br>
+					<label for="luname" class="llabel">Username</label><br>
 					<input type="text" id="luname" class="loginbox"><br>
-					<label for="lpass" id="llabel">Password</label><br>
+					<label for="lpass" class="llabel">Password</label><br>
 					<input type="password" id="lpass" class="loginbox"><br>
 				</form>
 				<button class="go_ahead">Go Ahead</button>
@@ -146,6 +162,7 @@
 	</main>
 	<script src="https://kit.fontawesome.com/9675136edf.js" crossorigin="anonymous"></script>
 	<script src="./js/sandbox.js"></script>
+	<script src="./js/signup_text_effect.js"></script>
 </body>
 
 </html>

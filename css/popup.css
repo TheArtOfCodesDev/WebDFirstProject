@@ -1,9 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Sofia|Jomhuria&effect=neon|outline|emboss|shadow-multiple');
+
 .login_popup
 {
 	display: none;
 	position: fixed;
+	margin-top: 4rem;
   	margin-left: 7rem;
   	z-index: 9;
+}
+@keyframes bp {
+  from {
+    background-position:  0 0;
+    /*background:  linear-gradient(#667eea,#764ba2);*/
+  }
+  
+  to {
+    background-position:  588px 0;
+    /*background: linear-gradient(#48c6ef,#6f86d6);*/
+  }
 }
 .signup
 {
@@ -12,8 +26,9 @@
 	height: 32rem;
 	left: 2px;
 	top: 0px;
-	background: linear-gradient(#03fcd7,#b7ff00);
+	background: url(".././img/bglogin.jpg");
 	box-shadow: inset -20px 10px 20px 20px rgba(0, 0, 0, 0.25);
+	animation: 4s linear 0s infinite bp;
 }
 .login
 {
@@ -22,30 +37,43 @@
 	height: 32rem;
 	left: 598px;
 	top: 0px;
-	background: linear-gradient(#03fcd7,#b7ff00);
+	background: url(".././img/bglogin.jpg");
 	box-shadow: inset -20px 10px 20px 20px rgba(0, 0, 0, 0.25);
+	animation: 4s linear 0s infinite bp;
 }
-#popup_line1
+/*#popup_line1
 {
 	position: absolute;
 	top: 2rem;
 	left: 3rem;
 	font-size: 1.3rem;
 	font-family: sans-serif;
-}
+}*/
 @keyframes effect {
     0% 
     {
+        background:  linear-gradient(#667eea,#764ba2);
+        -webkit-background-clip: background;
+    }
+    100% 
+    {
+        background: linear-gradient(#48c6ef,#6f86d6);
+        -webkit-background-clip: background;
+    }
+}
+@keyframes bgeffect {
+    0% 
+    {
         background: linear-gradient(#ff0000, #ff6a00);
-        -webkit-background-clip: text;
+        -webkit-background-clip: background;
     }
     100% 
     {
         background: linear-gradient(#3CE7D7, #000FFF);
-        -webkit-background-clip: text;
+        -webkit-background-clip: background;
     }
 }
-#popup_line2
+/*#popup_line2
 {
 	position: absolute;
 	top: 6rem;
@@ -54,7 +82,7 @@
 	font-family: serif;
 	color: transparent;
 	animation: effect 2s linear infinite;
-}
+}*/
 .signupbox
 {
 	position: relative;
@@ -64,18 +92,26 @@
 	left: 2rem;
 	margin-left: 4rem;
 	margin-bottom: 2rem;
+	background: transparent;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: solid 2px;
+	outline: none;
+	outline-style: none;
 }
-#slabel
+.slabel
 {
+	/*display: none;*/
 	position: relative;
-	font-family: "Georgia", serif;
-	font-size: 1.5rem;
+	font-family: "Jomhuria", serif;
+	font-size: 3rem;
 	top: 8rem;
 	margin-right: 4rem;
 	margin-left: 4rem;
 	margin-bottom: 2rem;
 }
-#popup_line3
+/*.popup_line3
 {
 	position: absolute;
 	top: 6rem;
@@ -84,32 +120,45 @@
 	font-size: 1.5rem;
 	font-family: "Georgia", serif;
 	animation: effect 2s linear infinite;
-}
+}*/
 .close
 {
 	width: 7rem;
 	height: 2rem;
 	border-radius: 2rem;
+	background: transparent;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	position: absolute;
 	top: 2.5rem;
 	right: 1.4rem;
+	animation: bgeffect 1s linear infinite;
 }
-#llabel
+.close:hover
+{
+	animation: effect 1s linear infinite;
+}
+.llabel
 {
 	position: relative;
-	top: 8rem;
+	top: 0rem;
 	left: 4rem;
-	font-size: 2rem;
-	font-family: "Garamond", serif;
+	font-size: 3rem;
+	font-family: "Jomhuria", serif;
 }
 .loginbox
 {
 	position: relative;
-	top: 8rem;
+	top: 0rem;
 	left: 6rem;
 	height: 2rem;
 	width: 12rem;
+	background: transparent;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: solid 2px;
+	outline: none;
+	outline-style: none;
 }
 .go_ahead
 {
@@ -119,6 +168,86 @@
   background: transparent;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: relative;
-  top: 10rem;
+  top: 3.7rem;
   left: 7rem;
+  animation: bgeffect 1s linear infinite;
+}
+.go_ahead:hover
+{
+	animation: effect 1s linear infinite;
+}
+
+
+/* font effects sign up */
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
+.hidden {
+  opacity:0;
+}
+.console-container {
+ 
+  font-family:Khula;
+  font-size:2rem;
+  text-align:center;
+  height:200px;
+  width:600px;
+  display:block;
+  position:absolute;
+  color:white;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin-top: 3rem;
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:10px;
+}
+
+/* font effects login */
+svg {
+    display: block;
+    font: 4.5rem 'Montserrat';
+    margin-bottom: 0;
+    margin-top: 2rem;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #4D163D;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #840037;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #BD0034;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #BD0034;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #FDB731;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
 }
