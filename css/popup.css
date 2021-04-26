@@ -2,7 +2,6 @@
 {
 	display: none;
 	position: fixed;
-  	margin-top: 4rem;
   	margin-left: 7rem;
   	z-index: 9;
 }
@@ -75,4 +74,22 @@
 	margin-right: 4rem;
 	margin-left: 4rem;
 	margin-bottom: 2rem;
+}
+#popup_line3
+{
+	position: absolute;
+	top: 6rem;
+	left: 7rem;
+}
+.close
+{
+	position: absolute;
+	right: 2px;
+	top: 2px;
+}
+#llabel
+{
+	position: relative;
+	top: 4rem;
+	left: 4rem;
 }
